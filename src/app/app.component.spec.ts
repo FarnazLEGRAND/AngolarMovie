@@ -14,16 +14,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'Angolar_movie'`, () => {
+  it(`should have as title 'angular-movie'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('Angolar_movie');
+    expect(app.title).toEqual('angular-movie');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('Angolar_movie app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('angular-movie app is running!');
   });
 });

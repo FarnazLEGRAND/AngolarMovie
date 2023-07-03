@@ -5,5 +5,3 @@ export interface Movie {
     resume:string;
     released:string;
 }
-
-
