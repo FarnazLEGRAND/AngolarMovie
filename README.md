@@ -68,6 +68,23 @@ On rajoute un bouton qui au click lancera le getData
 3. Côté HomeComponent on crée une méthode removeMovie(movie:Movie) qui va faire appel au delete du MovieService et dans le subscribe va faire en sorte de retirer le movie en question de la list (voir comment on utilise le filter)
 	
 4. Dans le template du home, on assigne cette méthode sur le app-movie-item
+
+
+
+        **Page pour un seul movie	
+
+1. Générer un component SingleMovieComponent et créer une route paramétrée sur 'movie/:id' qui va pointer sur ce component
+	
+2. Dans le MovieService, créer une méthode fetchOne qui va attendre un id:any en argument et s'en servir pour faire un get vers http://localhost:8000/movie/id et qui va donc return un Movie
+	
+3. Dans le SingleMovieComponent, créer une propriété movie:Movie en vous inspirant de l'exemple de routing paramétré, récupérer la valeur du paramètre id et s'en servir pour faire un appel au fetchOne (le constructeur aura donc 2 arguments private), on aura donc un subscribe dans un subscribe...
+	
+4. Faire le template pour afficher les informations du films
+	
+5. Dans le template du MovieItem, rajouter un a avec un routerLink à la place du href qui pointera sur la route /movie/id
+
+
+
 _____________________________
 _____________________________
 # AngolarMovie
