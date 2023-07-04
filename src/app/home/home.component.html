@@ -1,2 +1,5 @@
 <h1>Movie List</h1>
+
 <app-movie-item [movie]="item" *ngFor="let item of list" />
+
+<app-form-movie (added)="toList($event)"/>

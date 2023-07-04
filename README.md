@@ -43,6 +43,19 @@
 	
 7. 
 On rajoute un bouton qui au click lancera le getData
+
+
+        **Le formulaire de movie
+
+1. Créer un nouveau component FormMovieComponent et dans son template créer un form avec label et input pour title,released,resume,duration
+	
+2. Créer une propriété movie:Movie dans ce component et lier ses propriétés aux inputs du form
+	
+3. Rajouter une méthode handleSubmit() qui va pour le moment faire juste un console log du movie pour voir si tout est bien connecté
+	
+4. Dans le MovieService rajouter une méthode add(movie:Movie) qui va faire un http.post vers api/movie en lui donnant le movie en deuxième argument du post
+	
+5. Dans le FormMovieComponent, on récupère le service dans le constructeur et on fait en sorte d'appeler le post dans le handleSubmit
 _____________________________
 _____________________________
 # AngolarMovie

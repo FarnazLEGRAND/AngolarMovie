@@ -15,6 +15,9 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.service.fetchAll()
     .subscribe(data => this.list = data);
-    
+  }
+
+  toList(movie:Movie) {
+    this.service.add(movie).subscribe(data => this.list.push(data));
   }
 }
