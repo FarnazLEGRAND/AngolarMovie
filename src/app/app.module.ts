@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { MovieItemComponent } from './movie-item/movie-item.component';
 import { FormMovieComponent } from './form-movie/form-movie.component';
 import { ParametrizedExampleComponent } from './parametrized-example/parametrized-example.component';
+import { SingleMovieComponent } from './single-movie/single-movie.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ParametrizedExampleComponent } from './parametrized-example/parametrize
     HomeComponent,
     MovieItemComponent,
     FormMovieComponent,
-    ParametrizedExampleComponent
+    ParametrizedExampleComponent,
+    SingleMovieComponent
   ],
   imports: [
     BrowserModule,

@@ -21,4 +21,9 @@ export class MovieService {
     return this.http.delete<void>('http://localhost:8000/api/movie/'+id);
 
   }
+// byid melange fetchAll+delete
+  fetchOne(id:any) {
+    return this.http.get<Movie>('http://localhost:8000/api/movie/'+id);
+  }
+  
 }

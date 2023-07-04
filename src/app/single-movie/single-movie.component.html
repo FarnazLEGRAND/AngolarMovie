@@ -1,0 +1,11 @@
+<div *ngIf="movie">
+    <h1>{{movie.title}}</h1>
+    <p>Released on {{movie.released|date}}</p>
+    <p>Duration : {{movie.duration}}</p>
+    <h2>Resume</h2>
+    <p>{{movie.resume}}</p>
+</div>
+<!-- On rajoute un petit loader qui s'affichera le temps que la requête http se fasse -->
+<div *ngIf="!movie">
+    loading...
+</div>
