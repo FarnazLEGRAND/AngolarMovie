@@ -56,6 +56,18 @@ On rajoute un bouton qui au click lancera le getData
 4. Dans le MovieService rajouter une méthode add(movie:Movie) qui va faire un http.post vers api/movie en lui donnant le movie en deuxième argument du post
 	
 5. Dans le FormMovieComponent, on récupère le service dans le constructeur et on fait en sorte d'appeler le post dans le handleSubmit
+
+
+
+        **Suppression des movie
+
+1. Dans le MovieService, rajouter une méthode delete qui va attendre un id number en argument et qui va s'en servir pour déclencher un http.delete en concaténant l'id à l'url
+	
+2. Dans le movie-item.component.html, rajouter un bouton de suppression et faire que lorsque l'on click dessus va emit un @Output avec le movie dedans
+	
+3. Côté HomeComponent on crée une méthode removeMovie(movie:Movie) qui va faire appel au delete du MovieService et dans le subscribe va faire en sorte de retirer le movie en question de la list (voir comment on utilise le filter)
+	
+4. Dans le template du home, on assigne cette méthode sur le app-movie-item
 _____________________________
 _____________________________
 # AngolarMovie

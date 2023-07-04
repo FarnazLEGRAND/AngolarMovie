@@ -20,4 +20,11 @@ export class HomeComponent implements OnInit {
   toList(movie:Movie) {
     this.service.add(movie).subscribe(data => this.list.push(data));
   }
+
+  removeMovie(movie:Movie) {
+    if(movie.id) {
+      this.service.delete(movie.id)
+      .subscribe(() => this.list = this.list.filter(item => item.id != movie.id));
+    }
+  }
 }
