@@ -12,6 +12,7 @@ export class SingleMovieComponent implements OnInit {
   movie:Movie;
   // pour version update j'ajoute une variable boolean editing
   editing = false;
+  
   constructor(private route:ActivatedRoute, private service:MovieService){}
 
   ngOnInit(): void {

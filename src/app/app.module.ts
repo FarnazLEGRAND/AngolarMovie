@@ -10,6 +10,7 @@ import { MovieItemComponent } from './movie-item/movie-item.component';
 import { FormMovieComponent } from './form-movie/form-movie.component';
 import { ParametrizedExampleComponent } from './parametrized-example/parametrized-example.component';
 import { SingleMovieComponent } from './single-movie/single-movie.component';
+import { SearchBarComponent } from './search-bar/search-bar.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { SingleMovieComponent } from './single-movie/single-movie.component';
     MovieItemComponent,
     FormMovieComponent,
     ParametrizedExampleComponent,
-    SingleMovieComponent
+    SingleMovieComponent,
+    SearchBarComponent
   ],
   imports: [
     BrowserModule,

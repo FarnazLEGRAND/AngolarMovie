@@ -4,13 +4,10 @@ import { HomeComponent } from './home/home.component';
 import { ParametrizedExampleComponent } from './parametrized-example/parametrized-example.component';
 import { SingleMovieComponent } from './single-movie/single-movie.component';
 
-
-const routes:Routes = [
+const routes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'parametrized/:truc', component: ParametrizedExampleComponent},
   {path: 'movie/:id', component: SingleMovieComponent}
- 
- 
 ];
 
 @NgModule({

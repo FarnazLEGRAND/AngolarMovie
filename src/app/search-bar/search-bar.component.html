@@ -1,0 +1,8 @@
+<nav>
+    <div class="search">
+        <input type="search" placeholder="Search..." [(ngModel)]="term" (keyup)="doSearch()">
+        <ul *ngIf="results.length">
+            <li *ngFor="let result of results">{{result.title}}</li>
+        </ul>
+    </div>
+</nav>

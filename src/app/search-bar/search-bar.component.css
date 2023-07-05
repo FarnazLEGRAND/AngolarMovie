@@ -1,0 +1,25 @@
+.search {
+    width: 40%;
+    position: relative;
+}
+ul {
+    position: absolute;
+    background-color: white;
+    border: 1px solid gray;
+    border-top: none;
+    width: 100%;
+    margin: 0;
+    padding:0;
+}
+
+input {
+    width: 100%;
+}
+
+li {
+    text-indent: 20px;
+    list-style-type: none;
+}
+li:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
