@@ -13,8 +13,20 @@ export class SingleMovieComponent implements OnInit {
   constructor(private route:ActivatedRoute, private service:MovieService){}
 
   ngOnInit(): void {
+    
     this.route.params.subscribe(params => 
       this.service.fetchOne(params['id']).subscribe(data => this.movie = data)
     );
+
+    //Version un peu "mieux" qui utilise des fonctions des Observable
+    /*
+    this.route.params.pipe(
+      switchMap(params => this.service.fetchOne(params['id']))
+    ).subscribe(data => this.movie = data);
+    */
+  }
+
+  updateMovie(movie:Movie) {
+    this.service.update(movie).subscribe(data => this.movie = data);
   }
 }

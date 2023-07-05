@@ -4,8 +4,12 @@
     <p>Duration : {{movie.duration}}</p>
     <h2>Resume</h2>
     <p>{{movie.resume}}</p>
+
+    <!-- pour update -->
+    <app-form-movie [movie]="movie" (added)="updateMovie($event)" />
 </div>
 <!-- On rajoute un petit loader qui s'affichera le temps que la requête http se fasse -->
 <div *ngIf="!movie">
     loading...
+    <app-form-movie></app-form-movie>
 </div>

@@ -5,10 +5,10 @@ import { ParametrizedExampleComponent } from './parametrized-example/parametrize
 import { SingleMovieComponent } from './single-movie/single-movie.component';
 
 
-const routes: Routes = [
+const routes:Routes = [
   {path: '', component: HomeComponent},
   {path: 'parametrized/:truc', component: ParametrizedExampleComponent},
-  {path: ' movie/:id', component: SingleMovieComponent}
+  {path: 'movie/:id', component: SingleMovieComponent}
  
  
 ];

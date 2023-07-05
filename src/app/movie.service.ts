@@ -6,6 +6,9 @@ import { Movie } from './entities';
   providedIn: 'root'
 })
 export class MovieService {
+  // update(movie: Movie) {
+  //   throw new Error('Method not implemented.');
+  // }
 
   constructor(private http:HttpClient) { }
 
@@ -25,5 +28,9 @@ export class MovieService {
   fetchOne(id:any) {
     return this.http.get<Movie>('http://localhost:8000/api/movie/'+id);
   }
-  
+
+
+  update(movie:Movie) {
+    return this.http.patch<Movie>('http://localhost:8000/api/movie/'+movie.id, movie);
+  }
 }
