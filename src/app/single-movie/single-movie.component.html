@@ -1,15 +1,17 @@
 <div *ngIf="movie">
-    <h1>{{movie.title}}</h1>
-    <p>Released on {{movie.released|date}}</p>
-    <p>Duration : {{movie.duration}}</p>
-    <h2>Resume</h2>
-    <p>{{movie.resume}}</p>
-
-    <!-- pour update -->
-    <app-form-movie [movie]="movie" (added)="updateMovie($event)" />
+    <!-- on ajoute une if Editing  pour version update voire apres edite appuyer -->
+    <ng-container *ngIf="!editing">
+        <button (click)="editing = true">Edit</button>
+        <h1>{{movie.title}}</h1>
+        <p>Released on {{movie.released|date}}</p>
+        <p>Duration : {{movie.duration}}</p>
+        <h2>Resume</h2>
+        <p>{{movie.resume}}</p>
+    </ng-container>
+<!-- update a besois une if editing -->
+    <app-form-movie *ngIf="editing" [movie]="movie" (added)="updateMovie($event)" />
 </div>
 <!-- On rajoute un petit loader qui s'affichera le temps que la requête http se fasse -->
 <div *ngIf="!movie">
     loading...
-    <app-form-movie></app-form-movie>
 </div>

@@ -10,6 +10,8 @@ import { MovieService } from '../movie.service';
 })
 export class SingleMovieComponent implements OnInit {
   movie:Movie;
+  // pour version update j'ajoute une variable boolean editing
+  editing = false;
   constructor(private route:ActivatedRoute, private service:MovieService){}
 
   ngOnInit(): void {
@@ -27,6 +29,9 @@ export class SingleMovieComponent implements OnInit {
   }
 
   updateMovie(movie:Movie) {
-    this.service.update(movie).subscribe(data => this.movie = data);
+    this.service.update(movie).subscribe(data => {
+      this.movie = data;
+      this.editing = false;
+    });
   }
 }
